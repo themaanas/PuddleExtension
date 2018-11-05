@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>New Tab</title>
+	<script src="jquery.min.js"></script>
+	<script src="firebase-app.js"></script>
+	<script src="firebase-firestore.js"></script>
+	<script src="content.js"></script>
+	<link href="BreeSerif-Regular.ttf">
+	<link href="gotham.ttf">
+	<link href="circular.ttf">
+	<style>
+		@font-face {
+			font-family: bree;
+			src: url(BreeSerif-Regular.ttf);
+		}
+		@font-face {
+			font-family: gotham;
+			src: url(circular.ttf);
+		}
+		
+		img {
+			width: 102vw;
+			height: 102vh;
+			position: absolute;
+			top: -1vh;
+			left: -1vw;
+			border: none;
+			filter: blur(4px);
+			z-index: 0;
+			object-fit: cover;
+		}
+
+		
+
+		.titleBack {
+			z-index: 3;
+			position: fixed;
+			background: white;
+			left: 25vw;
+			top: 20vh;
+			border-radius: 10px;
+/*			opacity: 0.4;*/
+			width: 50vw;
+			height: 70vh;
+			margin: auto;
+		}
+		
+		.info {
+			z-index: 90;
+			position: fixed;
+			vertical-align: middle;
+			overflow: auto;
+			color: #2f2f2f;
+			text-align: left;
+			width: 40vw;
+			height: 45vh;
+			left: 30vw;
+			top: 25vh;
+			font-size: 20px;
+			font-family: gotham;
+			word-wrap: break-word;
+		}
+		.titleBar {
+			background: white;
+			top: 3vh;
+			width: 36vw;
+			left: 32vw;
+			height: 70px;
+			z-index: 5;
+			position: absolute;
+			border-radius: 100px;
+		}
+		.title {
+			z-index: 90;
+			position: relative;
+			color: #2f2f2f;
+			text-align: center;
+/*			width: 40vw;*/
+			top: 10px;
+			font-size: 30px;
+			font-family: bree;
+		}
+		body {
+			overflow: hidden;
+		}
+		.back {
+			z-index: 1;
+			position: fixed;
+			left: 0;
+			top: 0;
+			width: 100vw;
+			height: 100vh;
+			opacity: 0.3;
+			background: black;
+		}
+		.name {
+			
+		}
+	</style>
+</head>
+
+<body>
+	<img id="image" src="" />
+	<div class="name">MADE BY MAANAS MANOJ</div>
+	<div class="titleBar">
+		<div class="title" id="title">HHS Puddle - </div>
+	</div>
+	<div>
+		<div class="titleBack"></div>
+		<div class="info" id="info"></div>
+	</div>
+	<div class="back"></div>
+</body>
+
+</html>
+
+<!--curl -X GET https://api.unsplash.com/photos/random/?client_id=fbc3a193468c6e2e45a7134d4bd436dbb06416e4882f78decb8d11853e5dc1fc
+
+
+function getImg() {const Http = new XMLHttpRequest();const url = 'https://api.unsplash.com/photos/random/?client_id=fbc3a193468c6e2e45a7134d4bd436dbb06416e4882f78decb8d11853e5dc1fc'; Http.open("GET", url); Http.send(); Http.onreadystatechange = (e) => { console.log(Http.responseText) } }
+https://api.unsplash.com/collections/featured/?client_id=fbc3a193468c6e2e45a7134d4bd436dbb06416e4882f78decb8d11853e5dc1fc
+-->
